@@ -7,17 +7,17 @@ export default function Navbar() {
     const renderList = () => {
         if (state) {
             return [
-                <li>
+                <li key={1}>
                     <Link to="/profile">Profile</Link>
                 </li>,
-                <li>
+                <li key={2}> 
                     <Link to="/createpost">
                         <i className="material-icons" style={{ color: "white" }}>
                             add
                         </i>
                     </Link>
                 </li>,
-                <button className="btn waves-effect waves-light" type="submit" name="action" style={{backgroundColor:"transparent",
+                <button key={8} className="btn waves-effect waves-light" type="submit" name="action" style={{backgroundColor:"transparent",
                     border:"none"
                     }}
                     onClick={()=>{
@@ -33,10 +33,10 @@ export default function Navbar() {
             ];
         } else {
             return [
-                <li>
+                <li key={3}>
                     <Link to="/login">Login</Link>
                 </li>,
-                <li>
+                <li key={4}>
                     <Link to="/signup">Signup</Link>
                 </li>,
             ];
