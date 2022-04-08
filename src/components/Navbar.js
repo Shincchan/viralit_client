@@ -17,6 +17,11 @@ export default function Navbar() {
                         </i>
                     </Link>
                 </li>,
+                <li key={100}> 
+                <Link to="/myfollowingspost">
+                    Fllowings Post
+                </Link>
+                </li>,
                 <button key={8} className="btn waves-effect waves-light" type="submit" name="action" style={{backgroundColor:"transparent",
                     border:"none"
                     }}
@@ -45,7 +50,9 @@ export default function Navbar() {
 
     return (
         <>
+        <div className="navbar-fixed">
             <nav>
+            
                 <div
                     className="nav-wrapper"
                     style={{ backgroundColor: "rgb(1 133 109)" }}
@@ -57,7 +64,9 @@ export default function Navbar() {
                         {renderList()}
                     </ul>
                 </div>
+            
             </nav>
+            </div>
         </>
     );
 }
